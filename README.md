@@ -7,7 +7,7 @@ pipeline {
         stage('git repo & clean') {
             steps {
                 // If you want to delete existing project folder before cloning uncomment below:
-                // bat "rmdir /s /q xes"
+                bat "rmdir /s /q xes"
                 
                 bat "git clone https://github.com/Eshwar0745/xes.git"
                 bat "mvn clean -f xes"
